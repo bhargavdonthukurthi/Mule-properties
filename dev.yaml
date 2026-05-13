@@ -11,57 +11,7 @@ http:
     reconn:
       frequency: "10000"
       attempts: "3"
-   
-  account:
-    host: "account-netsuite-system-api-dev-k0cyhv.internal-9wn6v5.usa-e2.cloudhub.io"
-    port: "443"
-    readTimeout: "930000"
-    bufferSize: "1024"
-    connectionIdleTimeout: "30000"
-    reconn:
-      frequency: "10000"
-      attempts: "3"
-    
-  biReportUrl: 
-    host: "bireport-oracle-system-api-dev-k0cyhv.internal-9wn6v5.usa-e2.cloudhub.io"
-    port: "443"
-    readTimeout: "330000"
-    bufferSize: "1024"
-    connectionIdleTimeout: "30000"
-    reconn:
-      frequency: "10000"
-      attempts: "3"
-      
-  salesorder:
-    host: "salesorder-netsuite-system-api-dev-k0cyhv.internal-9wn6v5.usa-e2.cloudhub.io"
-    port: "443"
-    readTimeout: "930000"
-    bufferSize: "1024"
-    connectionIdleTimeout: "30000"
-    reconn:
-      frequency: "10000"
-      attempts: "3"
-      
-  taxlines:
-    host: "taxlines-netsuite-system-api-dev-k0cyhv.internal-9wn6v5.usa-e2.cloudhub.io"
-    port: "443"
-    readTimeout: "930000"
-    bufferSize: "1024"
-    connectionIdleTimeout: "30000"
-    reconn:
-      frequency: "10000"
-      attempts: "3"
 
-anypoint:
-  mq:    
-    url: "https://mq-us-east-1.anypoint.mulesoft.com/api/v1/organizations/02f70347-0867-4fc2-8378-74c8b94a5fa2/environments/3099370b-3e0e-4926-9a02-8113d8933924"
-    auditqueue:
-      name: "common.service.audit.queue.dev"
-    errorqueue:
-      name: "common.service.error.queue.dev"
-    reconn:
-      frequency: "10000"
-      attempts: "3"
 
 scheduler:
  initialState: "started"
@@ -76,79 +26,8 @@ uomCode:
 formType:
 # TRANSACTION_SOURCE : PROJECT_TYPE : RETENTION_INVOICE : Form Internal ID : NS Field Value : Legacy Subscription Number ## fields seperated by : and lines seperated by |
   "CONTRACT INVOICES:Install:N:1:238:null|CONTRACT INVOICES:Install:Y:2:105:null|ORA_Subscriptions:null:null:3:105:null|CONTRACT INVOICES:Box Sales:N:4:238:null|CONTRACT INVOICES:Service:N:5:105:null|CONTRACT INVOICES:Internal Project:N:6:105:null|CONTRACT MIGRATION:null:null:8:105:null|CONTRACT MIGRATION:null:null:3:105:Not Null"
-  
 
-invoiceCurrencyCode:
-  'Net 15': "1"
-  'Net 30': "2"
-  'Net 45': "7"
-  'Net 60': "3"                
-  'Net 90': "8"
-  'Due on receipt': "4"
-  
-reasonCode:
-  "Material return": "1"
-  "Invoice errors (credit & rebills)": "2"
-  "Pricing": "3"
-  "Shortage": "4"
-  
-deliveryMethodCode:
-  "EMAIL_INV": "1"
-  "ORA_PORTAL_UPLOAD_INV": "2"
-  "PRINT_INV": "3"  
-
-taxType:
-  "COUNTY SALES USE": "210"
-  "CITY SALES USE": "208"
-  "DISTRICT SALES USE": "209"
-  "STATE SALES USE": "207"
-  "COUNTRY GST": "50"
-  "COUNTRY HST": "212"
-  "PROVINCE QST": "56"
-  "PROVINCE PST": "211"
-  "BCPST SR SA": "211"
-  "US Other Sales": "162"
-  "Other Canada": "60"
-  "LEGACY_TAX_CODE": "224"
-  "CA_LEGACY_TAX_CODE": "225"
-
-taxCode:
-  "COUNTY SALES USE": "4479"
-  "COUNTY SALES USE SU": "4479"
-  "COUNTY SALES USE CU": "4479"
-  "CITY SALES USE": "4478"
-  "CITY SALES USE SU": "4478"
-  "CITY SALES USE CU": "4478"
-  "DISTRICT SALES USE": "4480"
-  "DISTRICT SALES USE SU": "4480"
-  "DISTRICT SALES USE CU": "4480"
-  "STATE SALES USE": "4477"
-  "STATE SALES USE SU": "4477"
-  "STATE SALES USE CU": "4477"
-  "CAGST SR S O": "1831"
-  "NBHST HT S O": "4484"
-  "NFHST HT S O": "4485"
-  "NSHST HT S O": "4486"
-  "ONHST HT S O": "4487"
-  "QCQST SR S O": "4476"
-  "PEHST HT S O": "9939"
-  "BCPST SR SA": "4488"
-  "MAPST SR SA": "4489"
-  "SKPST SR SA": "4490"
-  "CAGST EX S O": "11274"
-  "CAGSTP EX S O": "11275"
-  "BCPST EX SA": "11276"
-  "IDT_US_OTHER_S": "2216"
-  "IDT_CA_OTHER": "1841"
-  "LEGACY_TAX_RATE": "11278"
-  "CAN_LEGACY_TAX_RATE": "11279"
 
 test: "![LQXFQluCIRVpxze+vRcGFA==]"
-  
-taxTypeTransformation:
-  "1003": "162"
-  "2501": "60"
+test2: "{vault}secret/data/path1"
 
-taxCodeTransformation:
-  "1003": "2216"
-  "2501": "1841"
