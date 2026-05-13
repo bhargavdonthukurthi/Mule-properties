@@ -3,7 +3,7 @@ http:
   host: "0.0.0.0"
   
   netsuite:
-    host: "customerinvoice-netsuite-system-api-dev-k0cyhv.internal-9wn6v5.usa-e2.cloudhub.io"
+    host: ""
     port: "443"
     readTimeout: "930000"
     bufferSize: "1024"
@@ -142,7 +142,8 @@ taxCode:
   "IDT_CA_OTHER": "1841"
   "LEGACY_TAX_RATE": "11278"
   "CAN_LEGACY_TAX_RATE": "11279"
-  
+
+test: "![LQXFQluCIRVpxze+vRcGFA==]"
   
 taxTypeTransformation:
   "1003": "162"
